@@ -1,0 +1,4 @@
+# 生产环境依赖（Windows）
+flask==3.1.3
+PyMySQL==1.2.3
+waitress==3.0.0

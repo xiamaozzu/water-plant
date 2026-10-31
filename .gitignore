@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# 日志
+logs/
+*.log
+
+# 临时文件
+*.tmp
+*.bak
+
+# 安装包（不进版本库）
+soft/
+
+# OS
+Thumbs.db
+Desktop.ini

@@ -1,0 +1,20 @@
+[Unit]
+Description=水厂主体软件 - Flask Web 服务
+After=network.target mysql.service
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+WorkingDirectory=/opt/water-plant
+Environment="PATH=/opt/water-plant/.venv/bin"
+ExecStart=/opt/water-plant/.venv/bin/gunicorn -c gunicorn_config.py app.web:app
+Restart=always
+RestartSec=5
+
+# 日志标准输出到 journalctl
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
